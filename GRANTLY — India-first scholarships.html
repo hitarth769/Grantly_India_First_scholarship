@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>GRANTLY — Scholarships for students in India</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#08090B;--bg2:#101216;--el:#15181D;--card:#1B2026;--tx:#F4F2ED;--tx2:#A3A7A5;--lime:#C6F36A;--vio:#B6A0FF;--gold:#D8B77A;--bd:rgba(244,242,237,.1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 Inter,system-ui,sans-serif}
+h1,h2,h3,.d{font-family:'Space Grotesk',system-ui,sans-serif;letter-spacing:-.03em;line-height:1.05;margin:0}
+a{color:inherit;text-decoration:none}:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.w{max-width:1160px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(8,9,11,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+nav .w{display:flex;align-items:center;gap:20px;height:60px}nav .logo{font:700 20px 'Space Grotesk';letter-spacing:.04em;margin-right:auto}nav .logo i{color:var(--lime);font-style:normal}
+nav a.l{color:var(--tx2);padding:6px 2px;border-bottom:2px solid transparent;transition:.2s}nav a.l:hover,nav a.l.on{color:var(--tx);border-color:var(--lime)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--bd);background:transparent;color:var(--tx);padding:11px 20px;border-radius:999px;font:600 15px Inter;cursor:pointer;transition:transform .2s,background .2s,border-color .2s;min-height:44px}
+.btn:hover{border-color:var(--tx2);background:var(--el)}.btn:active{transform:scale(.97)}
+.btn.p{background:var(--lime);color:#0b0d08;border-color:var(--lime)}.btn.p:hover{background:#d4ff7a;transform:translateY(-2px)}
+.btn.s{padding:7px 14px;min-height:36px;font-size:14px}.btn.dng:hover{border-color:#ff7a7a;color:#ff9a9a}
+.hero{position:relative;min-height:calc(100vh - 60px);display:flex;align-items:center;overflow:hidden}
+#hc{position:absolute;inset:0;width:100%;height:100%}
+.hero .w{position:relative;pointer-events:none}.hero .w>*{pointer-events:auto}
+.hero h1{font-size:clamp(40px,7.4vw,92px);max-width:11em}.hero p{max-width:34em;color:var(--tx2);font-size:18px;margin:24px 0}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+section.s{padding:84px 0;border-top:1px solid var(--bd)}section.s h2{font-size:clamp(30px,4.4vw,52px);margin-bottom:12px;max-width:16em}
+.sub{color:var(--tx2);max-width:40em;margin:0 0 36px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:22px;transition:transform .25s,border-color .25s;position:relative;display:flex;flex-direction:column;gap:10px}
+.card:hover{transform:translateY(-4px);border-color:rgba(198,243,106,.5)}
+.amt{font:700 28px 'Space Grotesk';color:var(--lime)}.mut{color:var(--tx2);font-size:14px}
+.tag{display:inline-block;font-size:12px;padding:3px 10px;border-radius:999px;border:1px solid var(--bd);color:var(--tx2);margin:0 6px 6px 0}
+.tag.v{color:var(--vio);border-color:rgba(182,160,255,.4)}.tag.g{color:var(--gold);border-color:rgba(216,183,122,.4)}.tag.ok{color:var(--lime);border-color:rgba(198,243,106,.4)}
+.steps{display:grid;gap:0;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));border:1px solid var(--bd);border-radius:16px;overflow:hidden}
+.steps div{padding:26px;border-right:1px solid var(--bd);background:var(--bg2)}.steps b{font:700 22px 'Space Grotesk';display:block;color:var(--lime);margin-bottom:6px}
+.note{background:var(--bg2);border:1px dashed rgba(216,183,122,.5);border-radius:12px;padding:12px 16px;color:var(--gold);font-size:14px;margin:0 0 24px}
+input,select,textarea{width:100%;background:var(--el);color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:11px 12px;font:15px Inter;min-height:44px}
+label{display:block;font-size:14px;color:var(--tx2);margin-bottom:4px}label.c{display:flex;gap:10px;align-items:center;color:var(--tx);min-height:36px}label.c input{width:20px;min-height:20px;height:20px;accent-color:var(--lime)}
+.f{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:24px}.err{color:#ff9a9a;font-size:13px;min-height:1em}
+.bar{height:8px;background:var(--el);border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:var(--lime);transition:width .4s}
+.chk{list-style:none;padding:0;margin:0}.chk li{padding:5px 0;display:flex;gap:10px}.chk .y{color:var(--lime)}.chk .n{color:#ff9a9a}.chk .u{color:var(--gold)}
+.stats{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:28px}.stats .card b{font:700 32px 'Space Grotesk'}
+details{border-bottom:1px solid var(--bd);padding:16px 0}summary{cursor:pointer;font:600 18px 'Space Grotesk'}details p{color:var(--tx2);margin:10px 0 0}
+dialog{background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:16px;padding:26px;max-width:380px}dialog::backdrop{background:rgba(0,0,0,.7)}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--lime);color:#0b0d08;padding:10px 18px;border-radius:99px;font-weight:600;opacity:0;transition:.3s;z-index:60;pointer-events:none}#toast.on{opacity:1;transform:translate(-50%,0)}
+#intro{position:fixed;inset:0;background:var(--bg);z-index:100;transition:opacity .6s}#intro canvas{width:100%;height:100%;display:block}#intro button{position:absolute;right:20px;top:calc(20px + env(safe-area-inset-top,0px))}
+#cd,#cr{position:fixed;left:0;top:0;pointer-events:none;z-index:90;border-radius:50%;display:none}#cd{width:6px;height:6px;background:var(--lime);margin:-3px}#cr{width:36px;height:36px;margin:-18px;border:1px solid rgba(198,243,106,.6);transition:width .2s,height .2s,margin .2s}
+@media(pointer:fine){.cur #cd,.cur #cr{display:block}}
+footer{border-top:1px solid var(--bd);padding:36px 0;color:var(--tx2);font-size:14px}.pg{padding:48px 0 80px}.pg h1{font-size:clamp(34px,5vw,60px);margin-bottom:12px}
+@media(max-width:700px){nav .w{gap:12px;overflow-x:auto}nav a.l{white-space:nowrap}.steps div{border-right:0;border-bottom:1px solid var(--bd)}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+:root{color-scheme:dark}
+@media(prefers-color-scheme:dark){:root{color-scheme:dark}}
+</style></head><body>
+<div id="intro" role="dialog" aria-label="GRANTLY introduction"><canvas></canvas><button class="btn s" id="skip">Skip intro</button></div>
+<div id="cd"></div><div id="cr"></div><div id="toast" role="status" aria-live="polite"></div>
+<dialog id="dlg"><p id="dm"></p><div class="row" style="margin-top:18px"><button class="btn" id="dn">Cancel</button><button class="btn p" id="dy">Confirm</button></div></dialog>
+<nav aria-label="Main"><div class="w"><a class="logo" href="#home">GRANT<i>L</i>Y</a>
+<a class="l" href="#discover">Discover</a><a class="l" href="#match">Eligibility</a><a class="l" href="#tracker">Dashboard</a><a class="l" href="#profile">Profile</a></div></nav>
+<main id="app"></main>
+<footer><div class="w">GRANTLY lists illustrative demo scholarships to show how the product works. Always verify eligibility, amounts, deadlines and application steps on the official provider website. Matching is an informational guide, not an approval.</div></footer>
+<script>
+const INR=n=>new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(n);
+const DT=s=>s?new Date(s+'T00:00:00+05:30').toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric',timeZone:'Asia/Kolkata'}):'Rolling (no fixed date)';
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const STATES="Andhra Pradesh,Arunachal Pradesh,Assam,Bihar,Chhattisgarh,Goa,Gujarat,Haryana,Himachal Pradesh,Jharkhand,Karnataka,Kerala,Madhya Pradesh,Maharashtra,Manipur,Meghalaya,Mizoram,Nagaland,Odisha,Punjab,Rajasthan,Sikkim,Tamil Nadu,Telangana,Tripura,Uttar Pradesh,Uttarakhand,West Bengal,Andaman and Nicobar Islands,Chandigarh,Dadra and Nagar Haveli and Daman and Diu,Delhi,Jammu and Kashmir,Ladakh,Lakshadweep,Puducherry".split(',');
+const LEVELS=["Class 9","Class 10","Class 11","Class 12","Diploma","ITI","Undergraduate","Postgraduate","PhD / Research","Professional courses"];
+const FIELDS=["Science","Commerce","Humanities / Arts","Engineering","Medical","Nursing","Law","Management","Agriculture","Computer Science","Information Technology","Design","Vocational studies","Other"];
+const CATS=["Pre-Matric","Post-Matric","Merit-based","Need-based","Minority","Girls' education","STEM","State government","Private foundation","Research / PhD"];
+const AID=["Identity proof (Aadhaar or accepted ID)","Income certificate","Previous marksheet","Admission letter / bonafide certificate","Fee receipt","Bank account details","Passport-size photograph"];
+const DOCS=(...x)=>x.map(i=>AID[i]);
+// Illustrative demo data. Names are fictional; categories mirror real Indian scheme types. No official links are supplied.
+const SCH=[
+{id:'pm-school',t:'Demo Pre-Matric Support Grant',p:'Illustrative Central Scheme (demo)',amt:5000,lv:['Class 9','Class 10'],fd:['Any'],st:'All India',cat:'Pre-Matric',inc:250000,pct:0,g:'',dl:'2027-03-31',docs:DOCS(0,1,2,3,5,6),sum:'Class 9–10 students with family income up to ₹2,50,000.'},
+{id:'pm-minority',t:'Demo Post-Matric Minority Scholarship',p:'Illustrative Minority Affairs Scheme (demo)',amt:30000,lv:['Class 11','Class 12','Undergraduate','Postgraduate'],fd:['Any'],st:'All India',cat:'Minority',inc:200000,pct:50,g:'',dl:'2027-02-28',docs:DOCS(0,1,2,4,5),sum:'Post-matric minority students, 50% or more in last exam, income up to ₹2,00,000.'},
+{id:'girls-stem',t:'Demo Girls in STEM Scholarship',p:'Illustrative Foundation (demo)',amt:100000,lv:['Undergraduate'],fd:['Engineering','Science','Computer Science','Information Technology'],st:'All India',cat:"Girls' education",inc:600000,pct:75,g:'Female',dl:'2027-01-20',docs:DOCS(0,1,2,3,5),sum:'Women in UG STEM courses with 75% or more and income up to ₹6,00,000.'},
+{id:'eng-need',t:'Demo Engineering Need-Based Aid',p:'Illustrative Technical Education Fund (demo)',amt:50000,lv:['Undergraduate','Diploma'],fd:['Engineering','Information Technology','Computer Science'],st:'All India',cat:'Need-based',inc:400000,pct:60,g:'',dl:'2027-02-10',docs:DOCS(0,1,2,4,5),sum:'Engineering and diploma students, 60% or more, income up to ₹4,00,000.'},
+{id:'med-merit',t:'Demo Medical Merit Award',p:'Illustrative Health Education Trust (demo)',amt:250000,lv:['Undergraduate','Postgraduate'],fd:['Medical','Nursing'],st:'All India',cat:'Merit-based',inc:0,pct:85,g:'',dl:'2027-04-15',docs:DOCS(0,2,3,4,5),sum:'Medical and nursing students with 85% or more. No income limit.'},
+{id:'mp-state',t:'Demo Madhya Pradesh State Merit Support',p:'Illustrative State Programme (demo)',amt:25000,lv:['Class 12','Undergraduate'],fd:['Any'],st:'Madhya Pradesh',cat:'State government',inc:300000,pct:65,g:'',dl:'2027-03-05',docs:DOCS(0,1,2,3,5),sum:'Madhya Pradesh residents, 65% or more, income up to ₹3,00,000.'},
+{id:'iti-skill',t:'Demo ITI Skill Assistance',p:'Illustrative Skill Fund (demo)',amt:15000,lv:['ITI','Diploma'],fd:['Vocational studies','Engineering'],st:'All India',cat:'Need-based',inc:300000,pct:0,g:'',dl:null,docs:DOCS(0,1,3,5,6),sum:'ITI and diploma students with income up to ₹3,00,000. Rolling intake.'},
+{id:'phd-res',t:'Demo PhD Research Fellowship',p:'Illustrative Research Council (demo)',amt:1200000,lv:['PhD / Research'],fd:['Science','Engineering','Computer Science','Agriculture'],st:'All India',cat:'Research / PhD',inc:0,pct:60,g:'',dl:'2027-05-31',docs:DOCS(0,2,3,5),sum:'Registered PhD scholars in science and technology fields.'},
+{id:'law-found',t:'Demo Future Lawyers Grant',p:'Illustrative Private Foundation (demo)',amt:75000,lv:['Undergraduate','Postgraduate','Professional courses'],fd:['Law'],st:'All India',cat:'Private foundation',inc:500000,pct:60,g:'',dl:'2027-02-15',docs:DOCS(0,1,2,4,5),sum:'Law students, 60% or more, income up to ₹5,00,000.'}];
+let S={profile:{name:'',state:'',district:'',level:'',field:'',inst:'',pct:'',income:'',gender:''},track:{}};
+try{const r=localStorage.getItem('grantly.v2');if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
+const save=()=>{try{localStorage.setItem('grantly.v2',JSON.stringify(S))}catch(e){toast('Could not save in this browser. Changes last until you close the tab.')}};
+let tt;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2400)}
+let cb;function ask(m,f){$('#dm').textContent=m;cb=f;$('#dlg').showModal()}
+$('#dy').onclick=()=>{$('#dlg').close();cb&&cb()};$('#dn').onclick=()=>$('#dlg').close();
+function check(s,p){const c=[],has=v=>v!==''&&v!=null;
+c.push({l:'Education level: '+s.lv.join(', '),k:has(p.level)?s.lv.includes(p.level):null,m:'Add your education level'});
+c.push({l:'Location: '+s.st,k:s.st==='All India'?true:has(p.state)?p.state===s.st:null,m:'Add your state'});
+if(!s.fd.includes('Any'))c.push({l:'Field: '+s.fd.join(', '),k:has(p.field)?s.fd.includes(p.field):null,m:'Add your field of study'});
+if(s.inc)c.push({l:'Family income up to '+INR(s.inc),k:has(p.income)?+p.income<=s.inc:null,m:'Add annual family income'});
+if(s.pct)c.push({l:'Marks of '+s.pct+'% or more',k:has(p.pct)?+p.pct>=s.pct:null,m:'Add your percentage'});
+if(s.g)c.push({l:'Open to: '+s.g+' students',k:has(p.gender)?p.gender===s.g:null,m:'Gender is optional, but needed here'});
+const bad=c.filter(x=>x.k===false).length,unk=c.filter(x=>x.k===null).length;
+return{c,res:bad?'no':unk?'info':'yes',ok:c.filter(x=>x.k).length}}
+const RES={yes:['Matches your details','ok'],info:['Needs more information','g'],no:['Not matched','v']};
+const chkHTML=r=>'<ul class="chk">'+r.c.map(x=>`<li><span class="${x.k?'y':x.k===false?'n':'u'}" aria-hidden="true">${x.k?'✓':x.k===false?'✗':'?'}</span><span>${esc(x.l)}${x.k===null?' — <em>'+x.m+'</em>':''}<span class="sr" style="position:absolute;left:-9999px">${x.k?'matched':x.k===false?'not matched':'missing'}</span></span></li>`).join('')+'</ul>';
+const days=s=>s?Math.ceil((new Date(s+'T23:59:59+05:30')-Date.now())/864e5):null;
+const dlTxt=s=>{const d=days(s);return s?DT(s)+(d>=0?` (${d} days left)`:' (closed)'):DT(s)};
+function card(s){const r=check(s,S.profile);return`<article class="card"><div class="d"><span class="tag">${s.cat}</span><span class="tag v">Demo data</span></div><h3 style="font-size:22px">${esc(s.t)}</h3><div class="mut">${esc(s.p)}</div><div class="amt">${INR(s.amt)}</div><div class="mut">${esc(s.sum)}</div><div class="mut">${s.lv.join(', ')} · ${s.st} · ${dlTxt(s.dl)}</div><div><span class="tag ${RES[r.res][1]}">${RES[r.res][0]}</span></div><a class="btn s" href="#scholarship-${s.id}" style="align-self:flex-start;margin-top:auto">View details</a></article>`}
+function opts(a,v,ph){return`<option value="">${ph}</option>`+a.map(x=>`<option${x===v?' selected':''}>${esc(x)}</option>`).join('')}
+const FL={q:'',level:'',state:'',cat:'',min:'0',sort:'rel',elig:false};
+const V={
+home(){return`<section class="hero"><canvas id="hc" aria-hidden="true"></canvas><div class="w"><h1>Your ambition shouldn't be limited by your finances.</h1><p>Discover scholarships that fit your education, eligibility and future. Find opportunities, prepare your documents and manage every application in one place.</p><div class="row"><a class="btn p mag" href="#discover">Find My Scholarships</a><a class="btn mag" href="#how">Explore How It Works</a></div><p class="mut" style="font-size:14px">GRANTLY helps students discover and organise opportunities. It does not award scholarships.</p></div></section>
+<section class="s" id="how"><div class="w"><h2>From search to submission in four steps</h2><p class="sub">Each step maps to a real part of the app.</p><div class="steps"><div><b>Discover</b>Search by level, state, category and amount in ₹.</div><div><b>Match</b>See which criteria you meet, miss, or still need to enter.</div><div><b>Prepare</b>Get a document checklist built from each scholarship.</div><div><b>Track</b>Set a status, add notes and watch deadlines.</div></div></div></section>
+<section class="s"><div class="w"><h2>Opportunities across India</h2><div class="note">Illustrative demo catalogue. Names are fictional; categories reflect real Indian scheme types such as pre-matric, post-matric and state programmes.</div><div class="grid">${SCH.slice(0,3).map(card).join('')}</div><p><a class="btn" href="#discover" style="margin-top:20px">See all ${SCH.length}</a></p></div></section>
+<section class="s"><div class="w"><h2>Eligibility, explained line by line</h2><p class="sub">No mystery percentages. Every result lists what matched, what did not, and what you still need to enter.</p><div class="card" style="max-width:520px"><h3 style="font-size:20px">${esc(SCH[2].t)}</h3>${chkHTML(check(SCH[2],{level:'Undergraduate',state:'',field:'Engineering',income:'450000',pct:'72',gender:'Female'}))}<div class="mut">Example profile: UG Engineering, 72%, ₹4,50,000 income.</div></div></div></section>
+<section class="s"><div class="w"><h2>Questions</h2><details><summary>Is GRANTLY an official government portal?</summary><p>No. It is an independent organiser. Always apply on the provider's official website.</p></details><details><summary>Are these scholarships real?</summary><p>The catalogue is illustrative demo data. Verify every detail with the provider.</p></details><details><summary>Where is my data stored?</summary><p>Only in this browser, using local storage. You can reset it from Profile.</p></details><details><summary>Do all scholarships need the same documents?</summary><p>No. Each scholarship lists its own checklist.</p></details><p style="margin-top:32px"><a class="btn p" href="#profile">Create my profile</a></p></div></section>`},
+discover(){return`<div class="w pg"><h1>Discover scholarships</h1><div class="note">Illustrative demo data. Verify details with the official provider.</div><div class="f"><div><label for="q">Search</label><input id="q" data-f="q" type="search" value="${esc(FL.q)}" placeholder="Title, provider, state, category"></div><div><label for="fl">Education level</label><select id="fl" data-f="level">${opts(LEVELS,FL.level,'All levels')}</select></div><div><label for="fs">State</label><select id="fs" data-f="state">${opts(['All India',...STATES],FL.state,'Any state')}</select></div><div><label for="fc">Category</label><select id="fc" data-f="cat">${opts(CATS,FL.cat,'All categories')}</select></div><div><label for="fm">Minimum award</label><select id="fm" data-f="min">${[[0,'Any amount'],[25000,'₹25,000+'],[100000,'₹1,00,000+'],[500000,'₹5,00,000+']].map(a=>`<option value="${a[0]}"${FL.min==a[0]?' selected':''}>${a[1]}</option>`).join('')}</select></div><div><label for="so">Sort by</label><select id="so" data-f="sort"><option value="rel">Relevance</option><option value="amt"${FL.sort==='amt'?' selected':''}>Award amount</option><option value="dl"${FL.sort==='dl'?' selected':''}>Deadline</option></select></div></div><label class="c"><input type="checkbox" data-f="elig"${FL.elig?' checked':''}> Only show scholarships that match my profile</label><div class="row" style="margin:12px 0"><span id="cnt" class="mut"></span><button class="btn s" data-a="clear">Clear all filters</button></div><div class="grid" id="res"></div></div>`},
+match(){const p=S.profile,filled=Object.values(p).filter(Boolean).length;return`<div class="w pg"><h1>Your eligibility</h1><p class="sub">Results use only the details in your profile. They guide you; they are not an approval.${filled<4?' <a href="#profile" style="color:var(--lime)">Complete your profile</a> for sharper results.':''}</p>${SCH.map(s=>{const r=check(s,p);return`<div class="card" style="margin-bottom:16px"><div class="row" style="justify-content:space-between"><h3 style="font-size:22px">${esc(s.t)}</h3><span class="tag ${RES[r.res][1]}">${RES[r.res][0]} (${r.ok}/${r.c.length} criteria)</span></div>${chkHTML(r)}<a class="btn s" href="#scholarship-${s.id}" style="align-self:flex-start">View details</a></div>`}).join('')}</div>`},
+profile(){const p=S.profile;return`<div class="w pg"><h1>Student profile</h1><p class="sub">We ask only what scholarship criteria use. Gender is optional. Data stays in this browser.</p><form id="pf" novalidate><div class="f"><div><label for="n">Name</label><input id="n" name="name" value="${esc(p.name)}" autocomplete="name"></div><div><label for="s">State / UT</label><select id="s" name="state">${opts(STATES,p.state,'Select')}</select></div><div><label for="d">District</label><input id="d" name="district" value="${esc(p.district)}"></div><div><label for="l">Education level</label><select id="l" name="level">${opts(LEVELS,p.level,'Select')}</select></div><div><label for="fd">Field of study</label><select id="fd" name="field">${opts(FIELDS,p.field,'Select')}</select></div><div><label for="i">Board, college or university</label><input id="i" name="inst" value="${esc(p.inst)}" placeholder="CBSE, ICSE, State Board or institution"></div><div><label for="pc">Percentage (0–100)</label><input id="pc" name="pct" inputmode="decimal" value="${esc(p.pct)}"><div class="err" id="e-pct"></div></div><div><label for="in">Annual family income (₹)</label><input id="in" name="income" inputmode="numeric" value="${esc(p.income)}"><div class="err" id="e-income"></div></div><div><label for="g">Gender (optional)</label><select id="g" name="gender">${opts(['Female','Male','Other'],p.gender,'Prefer not to say')}</select></div></div><div class="row"><button class="btn p" type="submit">Save profile</button><button class="btn dng" type="button" data-a="reset">Reset all my data</button></div></form></div>`},
+tracker(){const ids=Object.keys(S.track),aw=ids.filter(i=>S.track[i].status==='Awarded'),tot=aw.reduce((a,i)=>a+SCH.find(s=>s.id===i).amt,0);
+const up=ids.map(i=>SCH.find(s=>s.id===i)).filter(s=>s.dl&&days(s.dl)>=0).sort((a,b)=>a.dl<b.dl?-1:1)[0];
+const rec=SCH.filter(s=>!S.track[s.id]&&check(s,S.profile).res==='yes').slice(0,3);
+return`<div class="w pg"><h1>Your dashboard</h1><div class="stats"><div class="card"><b>${ids.length}</b><span class="mut">Tracked scholarships</span></div><div class="card"><b>${ids.filter(i=>['Applied','Under review'].includes(S.track[i].status)).length}</b><span class="mut">Applications in progress</span></div><div class="card"><b>${INR(tot)}</b><span class="mut">Awarded (${aw.length})</span></div><div class="card"><b style="font-size:20px">${up?DT(up.dl):'None'}</b><span class="mut">${up?'Next deadline: '+esc(up.t):'No upcoming deadlines'}</span></div></div>
+${ids.length?ids.map(i=>{const s=SCH.find(x=>x.id===i),t=S.track[i],dn=s.docs.filter(d=>t.docs[d]).length,pr=Math.round(dn/s.docs.length*100);return`<div class="card" style="margin-bottom:16px"><div class="row" style="justify-content:space-between"><h3 style="font-size:22px">${esc(s.t)}</h3><span class="amt" style="font-size:22px">${INR(s.amt)}</span></div><div class="mut">Deadline: ${dlTxt(s.dl)}</div><div><label for="st-${i}">Status</label><select id="st-${i}" data-st="${i}">${['Saved','Preparing','Ready to apply','Applied','Under review','Awarded','Not selected'].map(x=>`<option${x===t.status?' selected':''}>${x}</option>`).join('')}</select></div><div><div class="mut">Documents: ${dn} of ${s.docs.length} ready (${pr}%)</div><div class="bar" role="progressbar" aria-valuenow="${pr}" aria-valuemin="0" aria-valuemax="100"><i style="width:${pr}%"></i></div></div>${s.docs.map((d,k)=>`<label class="c"><input type="checkbox" data-doc="${i}|${k}"${t.docs[d]?' checked':''}> ${esc(d)}</label>`).join('')}<div><label for="nt-${i}">Notes</label><textarea id="nt-${i}" rows="2">${esc(t.notes||'')}</textarea></div><div class="row"><button class="btn s p" data-note="${i}">Save notes</button><a class="btn s" href="#scholarship-${i}">Open details</a><button class="btn s dng" data-rm="${i}">Remove</button></div></div>`}).join(''):'<div class="card"><h3>Nothing tracked yet</h3><p class="mut">Save a scholarship to start tracking documents, notes and deadlines.</p><a class="btn p s" href="#discover" style="align-self:flex-start">Discover scholarships</a></div>'}
+${rec.length?`<h2 style="font-size:28px;margin:36px 0 16px">Recommended from your profile</h2><div class="grid">${rec.map(card).join('')}</div>`:''}</div>`},
+detail(id){const s=SCH.find(x=>x.id===id);if(!s)return V.nf();const r=check(s,S.profile),t=S.track[id];return`<div class="w pg"><a class="mut" href="#discover">← All scholarships</a><h1 style="margin-top:16px">${esc(s.t)}</h1><p class="mut">${esc(s.p)}</p><div class="amt" style="font-size:44px;margin:12px 0">${INR(s.amt)}</div><span class="tag v">Illustrative demo — not verified</span><span class="tag">${s.cat}</span><div class="grid" style="margin-top:24px"><div class="card"><h3>Eligibility</h3>${chkHTML(r)}<div class="mut">${esc(s.sum)}</div></div><div class="card"><h3>Required documents</h3><ul class="chk">${s.docs.map(d=>`<li>• ${esc(d)}</li>`).join('')}</ul></div><div class="card"><h3>Key details</h3><div class="mut">Deadline: ${dlTxt(s.dl)}<br>Location: ${s.st}<br>Levels: ${s.lv.join(', ')}</div><div class="mut">Official link: not available for demo data. Search the provider's official website.</div></div></div><div class="row" style="margin-top:24px">${t?`<a class="btn p" href="#tracker">Tracking: ${t.status}</a>`:`<button class="btn p" data-add="${s.id}">Save and track</button>`}</div></div>`},
+nf(){return`<div class="w pg"><h1>Page not found</h1><p class="sub">That page does not exist.</p><a class="btn p" href="#home">Go home</a></div>`}};
+function results(){const p=S.profile;let a=SCH.filter(s=>{const q=FL.q.toLowerCase();return(!q||[s.t,s.p,s.st,s.cat,s.sum,...s.lv,...s.fd].join(' ').toLowerCase().includes(q))&&(!FL.level||s.lv.includes(FL.level))&&(!FL.state||s.st==='All India'||s.st===FL.state)&&(!FL.cat||s.cat===FL.cat)&&s.amt>=+FL.min&&(!FL.elig||check(s,p).res!=='no')});
+if(FL.sort==='amt')a.sort((x,y)=>y.amt-x.amt);else if(FL.sort==='dl')a.sort((x,y)=>(x.dl||'9')<(y.dl||'9')?-1:1);else a.sort((x,y)=>check(y,p).ok-check(x,p).ok);
+$('#cnt').textContent=a.length+' scholarship'+(a.length===1?'':'s')+' found';$('#res').innerHTML=a.length?a.map(card).join(''):'<div class="card" style="grid-column:1/-1"><h3>No scholarships match</h3><p class="mut">Try removing a filter or searching a broader term.</p></div>'}
+function route(){const h=location.hash.slice(1)||'home';let k=h,html;if(h.startsWith('scholarship-'))html=V.detail(h.slice(12));else if(V[h]&&h!=='detail'&&h!=='nf')html=V[h]();else{html=V.nf();k=''}
+if(h==='how'){html=V.home()}$('#app').innerHTML=html;document.querySelectorAll('nav a.l').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+k));
+if(k==='discover')results();if(h==='how')$('#how').scrollIntoView();else if(!(h==='home'))scrollTo(0,0);if(k==='home'||h==='how')hero();else stopHero();document.title='GRANTLY — '+(k||'Not found')}
+addEventListener('hashchange',route);
+document.addEventListener('input',e=>{const f=e.target.dataset.f;if(f){FL[f]=e.target.type==='checkbox'?e.target.checked:e.target.value;results()}});
+document.addEventListener('change',e=>{const t=e.target;if(t.dataset.f){FL[t.dataset.f]=t.type==='checkbox'?t.checked:t.value;results()}
+if(t.dataset.st){S.track[t.dataset.st].status=t.value;save();toast('Status updated');if(t.value==='Awarded')route()}
+if(t.dataset.doc){const[i,k]=t.dataset.doc.split('|');S.track[i].docs[SCH.find(s=>s.id===i).docs[k]]=t.checked;save();route()}});
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const d=b.dataset;
+if(d.a==='clear'){Object.assign(FL,{q:'',level:'',state:'',cat:'',min:'0',sort:'rel',elig:false});route();toast('Filters cleared')}
+if(d.add){S.track[d.add]={status:'Saved',notes:'',docs:{}};save();toast('Saved to your dashboard');route()}
+if(d.note){S.track[d.note].notes=$('#nt-'+d.note).value;save();toast('Notes saved')}
+if(d.rm)ask('Remove this scholarship and its notes and checklist?',()=>{delete S.track[d.rm];save();route();toast('Removed')});
+if(d.a==='reset')ask('Delete your profile, tracked scholarships, notes and checklists from this browser?',()=>{S={profile:{name:'',state:'',district:'',level:'',field:'',inst:'',pct:'',income:'',gender:''},track:{}};try{localStorage.removeItem('grantly.v2')}catch(x){}route();toast('Data reset')})});
+document.addEventListener('submit',e=>{if(e.target.id!=='pf')return;e.preventDefault();const f=Object.fromEntries(new FormData(e.target)),pe=$('#e-pct'),ie=$('#e-income');pe.textContent=ie.textContent='';let ok=true;
+if(f.pct!==''&&!(+f.pct>=0&&+f.pct<=100)){pe.textContent='Enter a number from 0 to 100.';ok=false}
+if(f.income!==''&&!(+f.income>=0&&/^\d+$/.test(f.income.trim()))){ie.textContent='Enter whole rupees, for example 250000.';ok=false}
+if(!ok)return toast('Fix the highlighted fields');S.profile=f;save();toast('Profile saved')});
+// Intro: particles scatter from the wordmark and reassemble
+function intro(){const el=$('#intro');const done=()=>{cancelAnimationFrame(raf);el.style.opacity=0;setTimeout(()=>el.remove(),600);try{sessionStorage.setItem('gi','1')}catch(e){}};
+let seen=false;try{seen=sessionStorage.getItem('gi')}catch(e){}
+if(seen||matchMedia('(prefers-reduced-motion:reduce)').matches){el.remove();return}
+const c=el.querySelector('canvas'),x=c.getContext('2d'),dpr=Math.min(devicePixelRatio||1,2);let W=c.width=innerWidth*dpr,H=c.height=innerHeight*dpr,raf,P=[];
+const o=document.createElement('canvas');o.width=W;o.height=H;const ox=o.getContext('2d');const fs=Math.min(W/6,H/3);ox.font=`700 ${fs}px "Space Grotesk",sans-serif`;ox.textAlign='center';ox.textBaseline='middle';ox.fillStyle='#fff';ox.fillText('GRANTLY',W/2,H/2);
+const im=ox.getImageData(0,0,W,H).data,st=Math.max(4,Math.round(fs/22)),n=[];for(let j=0;j<H;j+=st)for(let i=0;i<W;i+=st)if(im[(j*W+i)*4+3]>128)n.push([i,j]);
+n.forEach((q,k)=>{const a=k*2.399963,r=(Math.sqrt(k%97)+3)*Math.min(W,H)/18;P.push({hx:q[0],hy:q[1],sx:W/2+Math.cos(a)*r,sy:H/2+Math.sin(a)*r,rot:a})});
+const T0=performance.now(),ez=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+function f(now){const t=(now-T0)/1000;x.clearRect(0,0,W,H);let k=t<.8?0:t<2.6?(t-.8)/1.8:t<3.4?1:1;const e=t<.8?0:t<2.6?Math.sin(Math.PI*ez(k)):0;
+const sz=st*.8*dpr/ dpr;P.forEach(p=>{const px=p.hx+(p.sx-p.hx)*e,py=p.hy+(p.sy-p.hy)*e,a=p.rot+e*6;x.save();x.translate(px,py);x.rotate(a);x.fillStyle=t>2.6?'#F4F2ED':'#F4F2ED';x.beginPath();x.ellipse(0,0,sz*(1.3-.7*e),sz*.6,0,0,7);x.fill();x.restore()});
+if(t>2.6){x.globalAlpha=Math.min(1,(t-2.6)*1.5);x.fillStyle='#C6F36A';x.fillRect(W/2-fs*1.6,H/2+fs*.62,fs*3.2*Math.min(1,(t-2.6)),4*dpr);x.fillStyle='#F4F2ED';x.font=`${Math.max(14*dpr,fs/6)}px Inter,sans-serif`;x.fillText('Your future deserves a fair chance.',W/2,H/2+fs*.95);x.globalAlpha=1}
+if(t>4.6)return done();raf=requestAnimationFrame(f)}
+raf=requestAnimationFrame(f);$('#skip').onclick=done}
+// Hero: cursor-reactive opportunity constellation (Canvas 2D)
+let hraf,hmove;function stopHero(){cancelAnimationFrame(hraf);removeEventListener('pointermove',hmove)}
+function hero(){stopHero();const c=$('#hc');if(!c)return;const x=c.getContext('2d'),dpr=Math.min(devicePixelRatio||1,2),rm=matchMedia('(prefers-reduced-motion:reduce)').matches;let W,H,m={x:0,y:0},sm={x:0,y:0};
+const rs=()=>{W=c.width=c.clientWidth*dpr;H=c.height=c.clientHeight*dpr};rs();
+const N=innerWidth<700?14:26,pts=[...Array(N)].map((_,i)=>({a:i*2.4,r:.22+.28*((i*37)%10)/10,s:.0002+((i*13)%7)*.00006,z:.4+((i*17)%10)/16,l:i%5===0?'₹':''}));
+hmove=e=>{m.x=e.clientX/innerWidth-.5;m.y=e.clientY/innerHeight-.5};addEventListener('pointermove',hmove);
+function d(t){sm.x+=(m.x-sm.x)*.05;sm.y+=(m.y-sm.y)*.05;x.clearRect(0,0,W,H);const cx=W*.7+sm.x*40*dpr,cy=H*.5+sm.y*40*dpr,R=Math.min(W,H),q=pts.map(p=>{const a=p.a+t*p.s;return{x:cx+Math.cos(a)*p.r*R*1.1+sm.x*60*p.z*dpr,y:cy+Math.sin(a)*p.r*R*.7+sm.y*60*p.z*dpr,z:p.z,l:p.l}});
+x.lineWidth=dpr;q.forEach((a,i)=>{const b=q[(i+3)%N];x.strokeStyle='rgba(198,243,106,.14)';x.beginPath();x.moveTo(cx,cy);x.lineTo(a.x,a.y);x.stroke();x.strokeStyle='rgba(182,160,255,.12)';x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()});
+q.forEach(a=>{const w=26*a.z*dpr;x.fillStyle='rgba(27,32,38,.9)';x.strokeStyle=a.l?'rgba(216,183,122,.7)':'rgba(244,242,237,.2)';x.beginPath();x.roundRect(a.x-w/2,a.y-w*.35,w,w*.7,4*dpr);x.fill();x.stroke();if(a.l){x.fillStyle='#D8B77A';x.font=`${w*.5}px Space Grotesk`;x.textAlign='center';x.fillText('₹',a.x,a.y+w*.15)}});
+x.fillStyle='#C6F36A';x.beginPath();x.arc(cx,cy,14*dpr,0,7);x.fill();x.fillStyle='#08090B';x.font=`700 ${14*dpr}px Space Grotesk`;x.textAlign='center';x.fillText('G',cx,cy+5*dpr);
+if(!rm)hraf=requestAnimationFrame(d)}
+hraf=requestAnimationFrame(d);if(rm)d(0)}
+// Cursor + magnetic buttons (fine pointers only)
+if(matchMedia('(pointer:fine)').matches){document.body.classList.add('cur');let mx=0,my=0,rx=0,ry=0;const cd=$('#cd'),cr=$('#cr');
+addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;cd.style.transform=`translate(${mx}px,${my}px)`;const m=e.target.closest&&e.target.closest('.mag');if(m){const r=m.getBoundingClientRect();m.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.15}px,${(e.clientY-r.top-r.height/2)*.25}px)`}});
+document.addEventListener('pointerout',e=>{const m=e.target.closest&&e.target.closest('.mag');if(m)m.style.transform=''});
+document.addEventListener('pointerover',e=>{const on=e.target.closest&&e.target.closest('a,button,input,select,textarea,summary,label');cr.style.width=cr.style.height=on?'56px':'36px';cr.style.margin=on?'-28px':'-18px'});
+(function l(){rx+=(mx-rx)*.18;ry+=(my-ry)*.18;cr.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(l)})()}
+route();intro();
+</script></body></html>
